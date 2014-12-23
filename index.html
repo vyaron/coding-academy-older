@@ -1,0 +1,121 @@
+<<<<<<< HEAD
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coding Academy</title>
+    <meta name="description" content="Coding Academy">
+    <!-- bower:css -->
+    <!-- endbower -->
+    <link rel="stylesheet" href="vendor/font-awsome/css/font-awesome.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css"/>
+  </head>
+  <body ng-app="coding.academy" ng-cloak id="ng-app">
+
+
+    <div ng-include="'app/nav/nav.tpl.html'"></div>
+
+
+      <div ui-view class="view-animation"></div>
+
+
+    <!-- build:js app.min.js -->
+    <!-- bower:js -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/ui-router/release/angular-ui-router.js"></script>
+    <script src="vendor/lodash/dist/lodash.compat.js"></script>
+    <script src="vendor/angular-animate/angular-animate.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="vendor/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <!-- endbower -->
+    <script src="dist/main.js"></script>
+    <!-- endbuild -->
+
+
+  </body>
+</html>
+=======
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>Coding Academy - ללמוד לתכנת</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="img/ico/favicon.png">
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css"/>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="bootstrap/js/html5shiv.js"></script>
+    <script src="bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Coding Academy</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li active-tab="1"><a href="#">Home</a></li>
+                <li active-tab><a href="#/you">אתה</a></li>
+                <li active-tab><a href="#/us">אנחנו</a></li>
+                <li active-tab><a href="#/method">ההכשרה</a></li>
+                <li active-tab><a href="#/contact">צור קשר</a></li>
+            </ul>
+        </div><!--/.navbar-collapse -->
+    </div>
+</div>
+
+
+
+  <div ng-view></div>
+
+  <hr />
+  <footer>
+      <p class="text-center"><a target="_blank" href="http://misterbit.co.il">&copy; misterBIT.co.il </a> 2013</p>
+  </footer>
+
+
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
+>>>>>>> 5b7d4f64575e0dcb49551d03f825754c5f225f2c
