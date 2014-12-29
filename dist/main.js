@@ -78,6 +78,11 @@ module.exports = HomeController;
           url        : "/four",
           templateUrl: "app/training/four.html"
         })
+        .state('training.five', {
+          url        : "/five",
+          templateUrl: "app/training/five.html"
+        })
+
         .state('contact', {
           url        : "/contact",
           templateUrl: "app/contact/contact.html"

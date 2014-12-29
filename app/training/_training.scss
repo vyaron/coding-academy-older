@@ -12,8 +12,9 @@
       display: block;
       position: relative;
       margin-bottom: 1em;
-      background: #21B5D3;
+      background: rgba(237, 177, 41, 0.15);
       a {
+        color:#333333;
         transition: all .6s;
       }
       &:hover {
@@ -30,12 +31,12 @@
         height: 0;
         border-style: solid;
         border-width: 30px 50px 30px 0;
-        border-color: transparent #21b5d3 transparent transparent;
+        border-color: transparent rgba(237, 177, 41, 0.15) transparent transparent;
     }
     .active {
-      background: #3A59A0;
+      background: #FACB61;
       span {
-        border-color: transparent #3A59A0 transparent transparent;
+        border-color: transparent #FACB61 transparent transparent;
       }
     }
   }
@@ -57,11 +58,11 @@
   dt{
     margin-top: 1em;
     font-size: 1.5em;
-    color:#3A59A0;
+    color:#d7622c;
     &:before {
       counter-increment: section;
       content: counter(section) ". ";
-      color:#3A59A0;
+      color:#d7622c;
     }
   }
   dd {
@@ -72,9 +73,11 @@
   h3 {
     font-size: 1.9em
   }
+  h2 {color:#d7622c;}
 }
 
 .view-animation-tr.ng-enter {
   animation: fadeInRight 0.6s;
 }
 
+.techLine img {float:left}

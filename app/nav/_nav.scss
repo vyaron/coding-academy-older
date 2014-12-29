@@ -11,13 +11,15 @@ nav {
     padding: 0 1.6em;
     div {
       height: 2px;
-      background: #63FFF5;
+      background: #FACB61;
       position: absolute;
       bottom: 0;
       width: 0;
       transition: all 0.3s;
     }
     &:hover {
+      a>i {color:rgb(233, 244, 141);}
+
       div {
         width:110px;
       }
