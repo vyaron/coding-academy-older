@@ -10,6 +10,7 @@ $visibility: hidden;
 @import "bounceInDown";
 @import "fadeInLeft";
 @import "fadeInRight";
+@import "tada";
 
 .bounce {
 	@include bounce($duration, $delay, $function, $fill, $visibility);
@@ -26,4 +27,8 @@ $visibility: hidden;
 
 .bounceInUp {
   @include bounceInDown($duration, $delay, $function, $fill, $visibility);
+}
+
+.tada {
+  @include tada($duration, $delay, $function, $fill, $visibility);
 }
