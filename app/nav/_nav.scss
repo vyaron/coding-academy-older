@@ -1,0 +1,70 @@
+nav.main-nav {
+  background: #D7612B;
+  input[type=checkbox], label {
+    display:none;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+  }
+  li {
+    display: inline-block;
+    line-height: 60px;
+    position: relative;
+    padding: 0 1.6em;
+    div {
+      height: 2px;
+      background: #FACB61;
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      transition: all 0.3s;
+    }
+    &:hover {
+      a>i {color:rgb(233, 244, 141);}
+
+      div {
+        width:110px;
+      }
+    }
+  }
+  li a {
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    font-size: 1.2em;
+  }
+  .active > div {
+    width:110px;
+  }
+}
+
+@include breakpoint($phone) {
+  nav.main-nav {
+    label {
+      display: inline-block;
+      width: 50px;
+      cursor: pointer;
+      margin-right: 20px;
+      transform: translateY(8px);
+      i {
+        font-size: 2em !important;
+        color:#fff;
+      }
+    }
+
+    input[type=checkbox]:checked ~ ul {
+      max-height: 350px;
+    }
+
+    width: 100%;
+    ul {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .6s linear;
+    }
+    ul li {
+      display: block;
+    }
+  }
+}

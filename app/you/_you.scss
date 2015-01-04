@@ -1,0 +1,30 @@
+.you {
+  h1 {
+    font-size: 3em;
+    margin-top: 0.4em;
+    margin-bottom: 0.2em;
+  }
+  p {
+    font-size: 1.6em;
+    i {
+      color: #D7612B;
+    }
+  }
+  .tc h3 {
+    font-size: 3em;
+  }
+  .tl {
+    margin-top: 2.7em;
+  }
+
+
+}
+
+
+
+@for $i from 1 through 6 {
+  .check-anim-#{$i} {
+    animation-duration: 0.5s;
+    animation-delay: #{$i}s
+  }
+}
