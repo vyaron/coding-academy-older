@@ -62,12 +62,12 @@ gulp.task('live', function() {
 });
 
 gulp.task('usemin', function() {
-  gulp.src('./app/template/index.html')
+  gulp.src('./index.html')
     .pipe(usemin({
       assetsDir: __dirname,
       js: [uglify()]
     }))
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('watch', function() {
@@ -84,6 +84,6 @@ gulp.task('browser-sync', function() {
   });
 });
 gulp.task('default', [ 'browserify', 'sass', 'watch', 'bower']);
-//gulp.task('default', ['usemin']);
+gulp.task('build', ['usemin']);
 
 
