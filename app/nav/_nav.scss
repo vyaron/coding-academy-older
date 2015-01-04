@@ -1,5 +1,8 @@
-nav {
+nav.main-nav {
   background: #D7612B;
+  input[type=checkbox], label {
+    display:none;
+  }
   ul {
     list-style: none;
     margin-bottom: 0;
@@ -33,5 +36,35 @@ nav {
   }
   .active > div {
     width:110px;
+  }
+}
+
+@include breakpoint($phone) {
+  nav.main-nav {
+    label {
+      display: inline-block;
+      width: 50px;
+      cursor: pointer;
+      margin-right: 20px;
+      transform: translateY(8px);
+      i {
+        font-size: 2em !important;
+        color:#fff;
+      }
+    }
+
+    input[type=checkbox]:checked ~ ul {
+      max-height: 350px;
+    }
+
+    width: 100%;
+    ul {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .6s linear;
+    }
+    ul li {
+      display: block;
+    }
   }
 }

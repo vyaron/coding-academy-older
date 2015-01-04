@@ -1,3 +1,6 @@
+$phone: max-width 785px;
+
+
 @import "bourbon/bourbon";
 @import "susy/language/susy";
 @import "breakpoint/breakpoint";
@@ -12,4 +15,23 @@
 @import "../us/us";
 @import "../training/training";
 @import "../contact/contact";
+
+img {
+  max-width: 100%;
+}
+
+.next {
+  opacity: 0;
+  font-size: 2.5em;
+  float: left;
+  color: rgb(158, 81, 81);
+  text-decoration: underline;
+  @include breakpoint($phone) {
+    opacity: 1;
+  }
+}
+
+
+
+
 

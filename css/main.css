@@ -533,6 +533,9 @@ main.home {
       color: #FFF;
       font-size: 9em;
       font-family: 'Gloria Hallelujah', cursive; }
+      @media (max-width: 785px) {
+        main.home section h1 {
+          font-size: 5em; } }
     main.home section h2, main.home section h3 {
       font-family: 'yehuda_clm';
       -webkit-animation-duration: 1.5s;
@@ -545,6 +548,11 @@ main.home {
       margin-right: 3.5em;
       -webkit-animation-delay: 1s;
               animation-delay: 1s; }
+      @media (max-width: 785px) {
+        main.home section h2 {
+          margin-top: 1.5em;
+          font-size: 2.7em;
+          margin-right: 1.5em; } }
     main.home section h3 {
       margin-top: 0;
       font-size: 2.7em;
@@ -563,17 +571,19 @@ main.home {
   font-size: 1.6em;
   line-height: 1.5em; }
 
-nav {
+nav.main-nav {
   background: #D7612B; }
-  nav ul {
+  nav.main-nav input[type=checkbox], nav.main-nav label {
+    display: none; }
+  nav.main-nav ul {
     list-style: none;
     margin-bottom: 0; }
-  nav li {
+  nav.main-nav li {
     display: inline-block;
     line-height: 60px;
     position: relative;
     padding: 0 1.6em; }
-    nav li div {
+    nav.main-nav li div {
       height: 2px;
       background: #FACB61;
       position: absolute;
@@ -581,18 +591,41 @@ nav {
       width: 0;
       -webkit-transition: all 0.3s;
               transition: all 0.3s; }
-    nav li:hover a > i {
+    nav.main-nav li:hover a > i {
       color: #e9f48d; }
-    nav li:hover div {
+    nav.main-nav li:hover div {
       width: 110px; }
-  nav li a {
+  nav.main-nav li a {
     color: #fff;
     width: 100%;
     display: inline-block;
     font-size: 1.2em; }
-  nav .active > div {
+  nav.main-nav .active > div {
     width: 110px; }
 
+@media (max-width: 785px) {
+  nav.main-nav {
+    width: 100%; }
+    nav.main-nav label {
+      display: inline-block;
+      width: 50px;
+      cursor: pointer;
+      margin-right: 20px;
+      -webkit-transform: translateY(8px);
+          -ms-transform: translateY(8px);
+              transform: translateY(8px); }
+      nav.main-nav label i {
+        font-size: 2em !important;
+        color: #fff; }
+    nav.main-nav input[type=checkbox]:checked ~ ul {
+      max-height: 350px; }
+    nav.main-nav ul {
+      max-height: 0;
+      overflow: hidden;
+      -webkit-transition: max-height .6s linear;
+              transition: max-height .6s linear; }
+    nav.main-nav ul li {
+      display: block; } }
 .button {
   display: inline-block;
   margin: 0 auto;
@@ -707,6 +740,9 @@ nav {
     margin-left: 1.69492%;
     margin: 0 auto;
     background: transparent; }
+    @media (max-width: 785px) {
+      .training nav {
+        display: none !important; } }
     .training nav ul {
       padding: 0;
       margin-top: 2.2em; }
@@ -714,15 +750,26 @@ nav {
       display: block;
       position: relative;
       margin-bottom: 1em;
-      background: rgba(237, 177, 41, 0.15); }
+      background: rgba(237, 177, 41, 0.15);
+      line-height: 60px;
+      padding: 0 1.6em; }
+      @media (max-width: 785px) {
+        .training nav ul li {
+          padding: 5px; } }
       .training nav ul li a {
         color: #333333;
         -webkit-transition: all .6s;
-                transition: all .6s; }
+                transition: all .6s;
+        font-size: 1.2em; }
       .training nav ul li:hover a {
         -webkit-transform: translateX(-15px);
             -ms-transform: translateX(-15px);
                 transform: translateX(-15px); }
+        @media (max-width: 785px) {
+          .training nav ul li:hover a {
+            -webkit-transform: none;
+                -ms-transform: none;
+                    transform: none; } }
     .training nav ul li span {
       position: absolute;
       left: -50px;
@@ -732,6 +779,9 @@ nav {
       border-style: solid;
       border-width: 30px 50px 30px 0;
       border-color: transparent rgba(237, 177, 41, 0.15) transparent transparent; }
+      @media (max-width: 785px) {
+        .training nav ul li span {
+          display: none; } }
     .training nav .active {
       background: #FACB61; }
       .training nav .active span {
@@ -771,6 +821,9 @@ nav {
 
 .techLine img {
   float: left; }
+  @media (max-width: 785px) {
+    .techLine img {
+      display: none !important; } }
 
 .contact {
   max-width: 50%;
@@ -821,12 +874,15 @@ nav {
     .contact section p:last-child {
       font-family: 'Gloria Hallelujah', cursive; }
 
-#img-yaron {
-  float: left;
-  width: 256px;
-  height: 384px;
-  border-radius: 20px;
-  background: url("/images/me/YaronBiton1.jpg"); }
+img {
+  max-width: 100%; }
 
-#img-yaron:hover {
-  background: url("/images/me/YaronBiton2.jpg"); }
+.next {
+  opacity: 0;
+  font-size: 2.5em;
+  float: left;
+  color: #9e5151;
+  text-decoration: underline; }
+  @media (max-width: 785px) {
+    .next {
+      opacity: 1; } }
