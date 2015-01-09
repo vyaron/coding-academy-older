@@ -874,6 +874,16 @@ nav.main-nav {
     .contact section p:last-child {
       font-family: 'Gloria Hallelujah', cursive; }
 
+#img-yaron {
+  float: left;
+  width: 256px;
+  height: 384px;
+  border-radius: 20px;
+  background: url("/images/me/YaronBiton1.jpg"); }
+
+#img-yaron:hover {
+  background: url("/images/me/YaronBiton2.jpg"); }
+
 img {
   max-width: 100%; }
 
