@@ -11,6 +11,9 @@ $visibility: hidden;
 @import "fadeInLeft";
 @import "fadeInRight";
 @import "tada";
+@import "swing";
+@import "flipInX";
+@import "fadeOutLeft";
 
 .bounce {
 	@include bounce($duration, $delay, $function, $fill, $visibility);
@@ -31,4 +34,14 @@ $visibility: hidden;
 
 .tada {
   @include tada($duration, $delay, $function, $fill, $visibility);
+}
+
+.swing {
+  @include swing($duration, $delay, $function, $fill, $visibility);
+}
+.flipInX {
+  @include flipInX($duration, $delay, $function, $fill, $visibility);
+}
+.fadeOutLeft {
+  @include fadeOutLeft($duration, $delay, $function, $fill, $visibility);
 }

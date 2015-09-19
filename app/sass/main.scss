@@ -1,4 +1,6 @@
 $phone: max-width 785px;
+$m: min-width 400px;
+
 
 
 @import "bourbon/bourbon";
@@ -20,18 +22,18 @@ img {
   max-width: 100%;
 }
 
-.next {
-  opacity: 0;
-  font-size: 2.5em;
-  float: left;
-  color: rgb(158, 81, 81);
-  text-decoration: underline;
-  @include breakpoint($phone) {
-    opacity: 1;
-  }
-}
-
-
-
-
-
+//.next {
+//  opacity: 0;
+//  font-size: 2.5em;
+//  float: left;
+//  color: rgb(158, 81, 81);
+//  text-decoration: underline;
+//  @include breakpoint($phone) {
+//    opacity: 1;
+//  }
+//}
+//
+//
+//
+//
+//

@@ -54,13 +54,13 @@
 
     .controller('HomeController', require('./home.controller'))
 
-    .run(runConfig)
-// @ngInject
-  function runConfig( $rootScope ) {
-    $rootScope.$on('$stateChangeSuccess', function() {
-      $("html, body").animate({scrollTop: 0}, 200);
-    })
-
-  }
+//    .run(runConfig)
+//// @ngInject
+//  function runConfig( $rootScope ) {
+//    $rootScope.$on('$stateChangeSuccess', function() {
+//      $("html, body").animate({scrollTop: 0}, 200);
+//    })
+//
+//  }
 
 })();

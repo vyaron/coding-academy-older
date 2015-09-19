@@ -5,12 +5,14 @@ $susy: (
   container: 90%
 );
 
+$btnColor: #f05f40;
+
 body, html {
   direction: rtl;
-  background: url(../images/body.png);
+//  background: url(../images/body.png);
   font-family: 'yehuda_clm';
   font-weight: bold;
-  padding-bottom: 3em;
+//  padding-bottom: 3em;
   overflow-x: hidden;
 }
 
@@ -58,3 +60,9 @@ a {
   margin-top: 1em;
 }
 
+
+.valign-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}

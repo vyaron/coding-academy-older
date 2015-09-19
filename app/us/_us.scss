@@ -1,22 +1,136 @@
 .us {
+  background-color: #f05f40;
+  display:block;
+  padding-top: 50px;
+
   h1 {
     font-size: 4em;
     margin-bottom: 0;
+    color:white;
+    text-shadow: 4px 4px 2px rgba(76, 76, 76, 1);
+
   }
-  h3 {
-    margin-top: 0.3em;
-    a {
-      font-size: 2em;
-      text-decoration: none;
-      color: #D7612B;
-      font-family: 'Gloria Hallelujah', cursive;
-    }
-  }
+
   p {
-    font-size: 1.6em;
-    line-height: 1.5em;
+//    font-size: 1.2em;
+//    line-height: 1.5em;
     &:first-of-type {
-      margin-top: 0;
+//      margin-top: 0;
     }
   }
+
+  .inner {
+    padding-top: 2em;
+    @include clearfix;
+    .desc {
+      @include breakpoint($m) {
+        @include span(8);
+      }
+
+    }
+    .ninja-canvas-container {
+      @include breakpoint($m) {
+        @include span(4 last);
+      }
+
+    }
+
+  }
+
+
+
+
+  .ninja-canvas-container {
+
+    @include breakpoint($phone) {
+      display: none;
+    }
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    margin: auto;
+    position: relative;
+    cursor: crosshair;
+
+    img {
+      position: absolute;
+    }
+    canvas {
+      position: relative;
+      left:30px;
+    }
+  }
+
+
+
+  /* companyBox */
+  #companySlider, #companyBoxsWrappeer, #companyBoxsSlider{
+    height: 176px;
+    @include breakpoint($phone) {
+      display: none;
+    }
+  }
+  #companySlider{
+    position: relative; width: 768px; margin: auto; /*bottom:16px;*/
+  }
+  #companyBoxsWrappeer{width: 648px; overflow: hidden; position: absolute; left:60px;}
+
+  #companyBoxsSlider {
+    width: 1700px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .companyBox{
+    width: 140px; height: 140px;
+    display: block;
+    background: white;
+    float:left;
+    margin-left:22px; margin-bottom:16px; margin-top:19px;
+    position: relative;
+    box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
+    transition: all 1s;
+    text-align: center;
+    &:hover{
+      box-shadow: 14px -5px 5px 0px rgba(0,0,0,0.75);
+    }
+    img {
+      vertical-align: middle;
+    }
+  }
+
+
+
+  .companyLogo{border-radius:7px; position: absolute; background-color: #fff; background-position:center center; background-repeat:no-repeat; left:0; top:0; z-index: 4; width: 139px; height: 139px; border: 1px solid #fbfbfb;}
+
+  #companySliderArrowleft, #companySliderArrowRight, .companyBox_gray_1, .companyBox_gray_2, .companyBox_gray_3, .companyBox_gray_4, .companyBox_gray_5, .companyBox_shadow{
+    background: url(../images/companyBox.png) no-repeat top left;
+    position: absolute;
+    z-index: 5;
+  }
+
+  #companySliderArrowleft {
+    background-position: 0 0;
+    width: 44px;
+    height: 48px;
+  }
+
+  #companySliderArrowRight {
+    background-position: 0 -98px;
+    width: 41px;
+    height: 48px;
+  }
+
+  #companySliderArrowRight, #companySliderArrowleft{top: 62px; opacity:0.5; cursor: pointer;}
+  #companySliderArrowRight:hover, #companySliderArrowleft:hover{opacity:1;}
+  #companySliderArrowRight{right:0;}
+  #companySliderArrowleft{left: 0;}
+
+
+
+
 }

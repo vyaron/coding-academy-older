@@ -1,35 +1,36 @@
-<main class="home">
-  <div class="overlay"></div>
+<div>
+<main class="home" id="home">
+  <!--<div class="overlay"></div>-->
   <div class="row">
-    <section>
-      <h1 class="animated bounceInUp">Coding Academy</h1>
-      <h2 class="animated fadeInRight">למד לתכנת ב-9 שבועות</h2>
-      <h3 class="animated fadeInLeft">והתחל לעבוד מייד</h3>
+    <section class="header-content">
+      <!--<h1 class="animated bounceInUp">Coding Academy</h1>-->
+      <!--<h2 class="animated fadeInRight">למד לתכנת ב-9 שבועות</h2>-->
+      <!--<h3 class="animated fadeInLeft">והתחל לעבוד מייד</h3>-->
+        <h1>גלה אם יש לך את זה</h1>
+        <header>
+        <hr id="thread1">
+        <hr id="thread2" class="right">
+        </header>
+
+        <p>
+            מסלול ייחודי שפותח ע"י ירון ביטון - ממפתחי קורס התכנות של בסמ"ח (ממר"ם) ומתוך ניסיון בהכשרת מפתחים רבים לעולם האינטרנט.
+        </p>
+        <p>
+            לימודים והתנסות יומיומית על פני 9 שבועות אינטנסיבים ומהנים, ובסופם אפשרות תעסוקה באחד התחומים האטרקטיביים ביותר על גבי הפלנטה.
+        </p>
+        <div class="row relative">
+            <a class="button page-scroll" href="#you" >
+                <span>ספר לי על זה</span>
+            </a>
+        </div>
     </section>
   </div>
 </main>
 
-<section class="container the-job">
-  <h4>התפקיד</h4>
-  <p>
-    מיועד לבעלי זיקה לעולם התכנות המוכנים להשקיע 9 שבועות של לימוד אינטנסיבי, בתמורה לרכישת אחד המקצועות המעניינים
-    והאטרקטיבים ביותר על גבי הפלנטה.
-  </p>
-  <p>
-    הקבלה מותנית במעבר ראיון, מבחני יכולת חשיבה ואתגר פתיחה בלימוד עצמי - כך נוכל אתה ואנחנו לוודא שאתה פונה למקצוע שאתה
-    הולך לאהוב ולהצליח בו.
-  </p>
-  <p>
-    לאחר ההכשרה יתקבלו העומדים בדרישות לעבודה במיסטרביט או אצל אחת משותפיה / לקוחותיה.
-  </p>
-
-  <div class="row relative tl">
-    <a class="button" ui-sref="you">
-      <span>ספר לי על זה</span>
-    </a>
-  </div>
-
-</section>
+<div ng-include="'app/you/you.html'"></div>
+<div ng-include="'app/us/us.html'"></div>
+<div ng-include="'app/training/training-intro.html'"></div>
+<div ng-include="'app/contact/contact.html'"></div>
 
 
-
+</div>
