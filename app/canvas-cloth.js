@@ -282,8 +282,8 @@ function start() {
 }
 
 $(document).ready(function () {
-    setTimeout(function () {
         canvas  = document.getElementById('c');
+        if (!canvas) return;
         ctx     = canvas.getContext('2d');
 
         canvas.width  = 420;
@@ -291,6 +291,5 @@ $(document).ready(function () {
         ctx.strokeStyle="#FF0000";
         start();
 
-    }, 500)
 
 });

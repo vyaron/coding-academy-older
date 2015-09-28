@@ -4,8 +4,8 @@
   var modules = [
 
     /** Third party modules **/
-    'ui.router',
-    'ngAnimate'
+    //'ui.router',
+    //'ngAnimate'
   ];
 
   module.exports = modules;

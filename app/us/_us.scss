@@ -1,14 +1,29 @@
 .us {
-  background-color: #f05f40;
+//  background-color: #f05f40;
+
+
   display:block;
-  padding-top: 50px;
+  padding-top: 20px;
+
+  .mark {
+    color:$color1
+  }
+  .title {
+    img {
+      max-width: 200px;
+    }
+    text-align: center
+  }
 
   h1 {
     font-size: 4em;
     margin-bottom: 0;
-    color:white;
-    text-shadow: 4px 4px 2px rgba(76, 76, 76, 1);
+    color:black;
+    text-shadow: 4px 4px 2px $color2;
 
+  }
+  h2 {
+//    color: #FAF5EE
   }
 
   p {
@@ -23,14 +38,18 @@
     padding-top: 2em;
     @include clearfix;
     .desc {
+      font-size: 1.2em;
       @include breakpoint($m) {
-        @include span(8);
+        @include span(6);
       }
 
     }
-    .ninja-canvas-container {
+    .main-img {
       @include breakpoint($m) {
-        @include span(4 last);
+        @include span(6 last);
+      }
+      img {
+        max-height: 300px;
       }
 
     }
@@ -40,38 +59,12 @@
 
 
 
-  .ninja-canvas-container {
-
-    @include breakpoint($phone) {
-      display: none;
-    }
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    margin: auto;
-    position: relative;
-    cursor: crosshair;
-
-    img {
-      position: absolute;
-    }
-    canvas {
-      position: relative;
-      left:30px;
-    }
-  }
 
 
 
   /* companyBox */
   #companySlider, #companyBoxsWrappeer, #companyBoxsSlider{
     height: 176px;
-    @include breakpoint($phone) {
-      display: none;
-    }
   }
   #companySlider{
     position: relative; width: 768px; margin: auto; /*bottom:16px;*/
@@ -125,7 +118,7 @@
     height: 48px;
   }
 
-  #companySliderArrowRight, #companySliderArrowleft{top: 62px; opacity:0.5; cursor: pointer;}
+  #companySliderArrowRight, #companySliderArrowleft{top: 62px; opacity:0.5; cursor: pointer; transition: opacity 0.3s}
   #companySliderArrowRight:hover, #companySliderArrowleft:hover{opacity:1;}
   #companySliderArrowRight{right:0;}
   #companySliderArrowleft{left: 0;}
@@ -134,3 +127,29 @@
 
 
 }
+
+
+//.ninja-canvas-container {
+//
+//  @include breakpoint($phone) {
+//    display: none;
+//  }
+//
+//  -webkit-user-select: none;
+//  -moz-user-select: none;
+//  -ms-user-select: none;
+//  -o-user-select: none;
+//  user-select: none;
+//  margin: auto;
+//  position: relative;
+//  cursor: crosshair;
+//
+//  img {
+//    position: absolute;
+//    max-width:270px;
+//  }
+//  canvas {
+//    position: relative;
+//    left:30px;
+//  }
+//}

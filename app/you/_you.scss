@@ -4,6 +4,7 @@
   display:block;
     padding: 50px 0px;
   h1 {
+    color: $color2;
     font-size: 3em;
     margin-top: 0.4em;
     margin-bottom: 0.2em;
@@ -12,12 +13,12 @@
   p {
     font-size: 1.6em;
     i {
-      color: #D7612B;
+      color: $color1;
     }
   }
   .tc h3 {
     font-size: 2em;
-    color: #D7612B;
+    color: $color1;
   }
   .tl {
     margin-top: 2.7em;

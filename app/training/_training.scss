@@ -1,36 +1,60 @@
 .training {
-  background-image: linear-gradient(to top, #FFFFFF 0%, #3366FF 100%);
+  color:#ddd;
+  background: linear-gradient(to bottom, #154277 0%,#576e71 30%,#e1c45e 70%,#b26339 100%);
   display:block;
-  padding: 20px 0px;
+  padding: 20px 10px;
+  @include clearfix;
+  .principles {
+    color:#333;
+    max-width: 1000px;
+    margin:auto
+  }
 
-  img.cloud{
+
+  .desc {
+    max-width:600px;
+    font-size: 1.3em;
+  }
+
+
+  img.cloud1{
     position:absolute;
-    &:first-child {
-      left: 40px;
-    }
+    right:0px;
+  }
+  img.cloud2{
+    position:absolute;
+    left:20px;
   }
 
   hr {
     width:40%;
+    margin:auto;
     margin-top:5em;
   }
   h2.tc {
     margin-bottom: 2em;
-    color:white;
+  }
+
+  a.text-info {
+    color:#fff;
+
   }
 
 
   .service-box {
     text-align: center;
+    p {
+      text-align: justify;
+    }
     &:nth-child(1) {
       i,h3 {
-        color:#000088;
+        color:#d7622c;
       }
 
     }
     &:nth-child(2) {
       i,h3 {
-        color: #f45d40;
+        color: #d74b59;
       }
     }
     &:nth-child(3) {
@@ -45,6 +69,7 @@
   @include breakpoint($m) {
     .service-box {
       @include span(4);
+
     }
     .service-box:last-child {
       @include last;
@@ -55,112 +80,3 @@
 
 }
 
-
-
-//.training1 {
-//  @include clearfix;
-//  nav {
-//    @include breakpoint($phone) {
-//      display: none !important;
-//    }
-//    @include span(3);
-//    margin: 0 auto;
-//    background: transparent;
-//    ul {
-//      padding: 0;
-//      margin-top: 2.2em;
-//    }
-//    ul li {
-//      display: block;
-//      position: relative;
-//      margin-bottom: 1em;
-//      background: rgba(237, 177, 41, 0.15);
-//      line-height: 60px;
-//      padding: 0 1.6em;
-//      @include breakpoint($phone) {
-//        padding:5px;
-//      }
-//      a {
-//        color: #333333;
-//        transition: all .6s;
-//        font-size: 1.2em;
-//      }
-//      &:hover {
-//        a {
-//          transform: translateX(-15px);
-//          @include breakpoint($phone) {
-//            transform: none;
-//          }
-//        }
-//      }
-//    }
-//    ul li span {
-//      position: absolute;
-//      left: -50px;
-//      top: 0px;
-//      width: 0;
-//      height: 0;
-//      border-style: solid;
-//      border-width: 30px 50px 30px 0;
-//      border-color: transparent rgba(237, 177, 41, 0.15) transparent transparent;
-//      @include breakpoint($phone) {
-//        display: none;
-//      }
-//    }
-//    .active {
-//      background: #FACB61;
-//      span {
-//        border-color: transparent #FACB61 transparent transparent;
-//      }
-//    }
-//  }
-//  h1 {
-//    font-size: 2.5em;
-//  }
-//  p {
-//    font-size: 1.4em;
-//    line-height: 1.6em;
-//  }
-//
-//}
-//
-//.training1 {
-//  counter-reset: section;
-//  main {
-//    @include span(8 last);
-//  }
-//  dt {
-//    margin-top: 1em;
-//    font-size: 1.5em;
-//    color: #d7622c;
-//    &:before {
-//      counter-increment: section;
-//      content: counter(section) ". ";
-//      color: #d7622c;
-//    }
-//  }
-//  dd {
-//    margin-top: 0.7em;
-//    font-size: 1.2em;
-//    line-height: 30px;
-//  }
-//  h3 {
-//    font-size: 1.9em
-//  }
-//  h2 {
-//    color: #d7622c;
-//  }
-//}
-//
-//.view-animation-tr.ng-enter {
-//  animation: fadeInRight 0.6s;
-//}
-//
-//.techLine img {
-//  float: left;
-//  @include breakpoint($phone) {
-//    display: none !important;
-//  }
-//}
-//
-//
