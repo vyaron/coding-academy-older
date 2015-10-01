@@ -1,5 +1,9 @@
 .us {
-//  background-color: #f05f40;
+  // Needs latest Compass, add '@import "compass"' to your scss
+  // Permalink - use to edit and share this gradient:
+  // http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231
+  background-color: rgb(206,220,231); // Old browsers
+  @include background-image(linear-gradient(bottom,  rgba(206,220,231,1) 0%,rgba(89,106,114,1) 100%));
 
 
   display:block;
@@ -22,17 +26,6 @@
     text-shadow: 4px 4px 2px $color2;
 
   }
-  h2 {
-//    color: #FAF5EE
-  }
-
-  p {
-//    font-size: 1.2em;
-//    line-height: 1.5em;
-    &:first-of-type {
-//      margin-top: 0;
-    }
-  }
 
   .inner {
     padding-top: 2em;
@@ -50,79 +43,32 @@
       }
       img {
         max-height: 300px;
+        display:block;
+        margin:auto;
       }
 
     }
 
   }
 
-
-
-
-
-
-
-  /* companyBox */
-  #companySlider, #companyBoxsWrappeer, #companyBoxsSlider{
-    height: 176px;
-  }
-  #companySlider{
-    position: relative; width: 768px; margin: auto; /*bottom:16px;*/
-  }
-  #companyBoxsWrappeer{width: 648px; overflow: hidden; position: absolute; left:60px;}
-
-  #companyBoxsSlider {
-    width: 1700px;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .companyBox{
-    width: 140px; height: 140px;
-    display: block;
-    background: white;
-    float:left;
-    margin-left:22px; margin-bottom:16px; margin-top:19px;
-    position: relative;
-    box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
-    transition: all 1s;
+  .company-logos {
+//    white-space: nowrap;
     text-align: center;
-    &:hover{
-      box-shadow: 14px -5px 5px 0px rgba(0,0,0,0.75);
+//    margin: 1em 0;
+    height:60px;
+
+    .helper {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
     }
     img {
       vertical-align: middle;
+      max-height: 60px;
     }
+
+
   }
-
-
-
-  .companyLogo{border-radius:7px; position: absolute; background-color: #fff; background-position:center center; background-repeat:no-repeat; left:0; top:0; z-index: 4; width: 139px; height: 139px; border: 1px solid #fbfbfb;}
-
-  #companySliderArrowleft, #companySliderArrowRight, .companyBox_gray_1, .companyBox_gray_2, .companyBox_gray_3, .companyBox_gray_4, .companyBox_gray_5, .companyBox_shadow{
-    background: url(../images/companyBox.png) no-repeat top left;
-    position: absolute;
-    z-index: 5;
-  }
-
-  #companySliderArrowleft {
-    background-position: 0 0;
-    width: 44px;
-    height: 48px;
-  }
-
-  #companySliderArrowRight {
-    background-position: 0 -98px;
-    width: 41px;
-    height: 48px;
-  }
-
-  #companySliderArrowRight, #companySliderArrowleft{top: 62px; opacity:0.5; cursor: pointer; transition: opacity 0.3s}
-  #companySliderArrowRight:hover, #companySliderArrowleft:hover{opacity:1;}
-  #companySliderArrowRight{right:0;}
-  #companySliderArrowleft{left: 0;}
-
 
 
 
@@ -153,3 +99,68 @@
 //    left:30px;
 //  }
 //}
+
+
+
+/* companyBox */
+//  #companySlider, #companyBoxsWrappeer, #companyBoxsSlider{
+//    height: 176px;
+//  }
+//  #companySlider{
+//    position: relative; width: 768px; margin: auto; /*bottom:16px;*/
+//  }
+//  #companyBoxsWrappeer{width: 648px; overflow: hidden; position: absolute; left:60px;}
+//
+//  #companyBoxsSlider {
+//    width: 1700px;
+//    position: absolute;
+//    left: 0;
+//    top: 0;
+//  }
+//
+//  .companyBox{
+//    width: 140px; height: 140px;
+//    display: block;
+//    background: white;
+//    float:left;
+//    margin-left:22px; margin-bottom:16px; margin-top:19px;
+//    position: relative;
+//    box-shadow: 14px 10px 5px 0px rgba(0,0,0,0.75);
+//    transition: all 1s;
+//    text-align: center;
+//    &:hover{
+//      box-shadow: 14px -5px 5px 0px rgba(0,0,0,0.75);
+//    }
+//    img {
+//      vertical-align: middle;
+//    }
+//  }
+//
+//
+//
+//  .companyLogo{border-radius:7px; position: absolute; background-color: #fff; background-position:center center; background-repeat:no-repeat; left:0; top:0; z-index: 4; width: 139px; height: 139px; border: 1px solid #fbfbfb;}
+//
+//  #companySliderArrowleft, #companySliderArrowRight, .companyBox_gray_1, .companyBox_gray_2, .companyBox_gray_3, .companyBox_gray_4, .companyBox_gray_5, .companyBox_shadow{
+//    background: url(../images/companyBox.png) no-repeat top left;
+//    position: absolute;
+//    z-index: 5;
+//  }
+//
+//  #companySliderArrowleft {
+//    background-position: 0 0;
+//    width: 44px;
+//    height: 48px;
+//  }
+//
+//  #companySliderArrowRight {
+//    background-position: 0 -98px;
+//    width: 41px;
+//    height: 48px;
+//  }
+//
+//  #companySliderArrowRight, #companySliderArrowleft{top: 62px; opacity:0.5; cursor: pointer; transition: opacity 0.3s}
+//  #companySliderArrowRight:hover, #companySliderArrowleft:hover{opacity:1;}
+//  #companySliderArrowRight{right:0;}
+//  #companySliderArrowleft{left: 0;}
+//
+

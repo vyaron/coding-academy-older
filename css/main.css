@@ -791,7 +791,11 @@ nav.main-nav {
             transition: all 0.5s;
     margin-left: 1em; }
     nav.main-nav .logo:hover {
-      color: #D7612B; }
+      color: #e1b828; }
+    nav.main-nav .logo .symbol {
+      color: #e1b828; }
+      nav.main-nav .logo .symbol:hover {
+        color: white; }
 
 @media (max-width: 785px) {
   nav.main-nav {
@@ -919,9 +923,11 @@ nav.main-nav {
           animation-delay: 7s; }
 
 .us {
+  background-color: #cedce7;
+  background-image: -webkit-linear-gradient(bottom, #cedce7 0%, #596a72 100%);
+  background-image: linear-gradient(to top, #cedce7 0%, #596a72 100%);
   display: block;
-  padding-top: 20px;
-  /* companyBox */ }
+  padding-top: 20px; }
   .us .mark {
     color: #D7612B; }
   .us .title {
@@ -952,79 +958,21 @@ nav.main-nav {
         float: left;
         margin-left: 0; } }
     .us .inner .main-img img {
-      max-height: 300px; }
-  .us #companySlider, .us #companyBoxsWrappeer, .us #companyBoxsSlider {
-    height: 176px; }
-  .us #companySlider {
-    position: relative;
-    width: 768px;
-    margin: auto;
-    /*bottom:16px;*/ }
-  .us #companyBoxsWrappeer {
-    width: 648px;
-    overflow: hidden;
-    position: absolute;
-    left: 60px; }
-  .us #companyBoxsSlider {
-    width: 1700px;
-    position: absolute;
-    left: 0;
-    top: 0; }
-  .us .companyBox {
-    width: 140px;
-    height: 140px;
-    display: block;
-    background: white;
-    float: left;
-    margin-left: 22px;
-    margin-bottom: 16px;
-    margin-top: 19px;
-    position: relative;
-    box-shadow: 14px 10px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-transition: all 1s;
-            transition: all 1s;
-    text-align: center; }
-    .us .companyBox:hover {
-      box-shadow: 14px -5px 5px 0px rgba(0, 0, 0, 0.75); }
-    .us .companyBox img {
+      max-height: 300px;
+      display: block;
+      margin: auto; }
+  .us .company-logos {
+    text-align: center;
+    height: 60px; }
+    .us .company-logos .helper {
+      display: inline-block;
+      height: 100%;
       vertical-align: middle; }
-  .us .companyLogo {
-    border-radius: 7px;
-    position: absolute;
-    background-color: #fff;
-    background-position: center center;
-    background-repeat: no-repeat;
-    left: 0;
-    top: 0;
-    z-index: 4;
-    width: 139px;
-    height: 139px;
-    border: 1px solid #fbfbfb; }
-  .us #companySliderArrowleft, .us #companySliderArrowRight, .us .companyBox_gray_1, .us .companyBox_gray_2, .us .companyBox_gray_3, .us .companyBox_gray_4, .us .companyBox_gray_5, .us .companyBox_shadow {
-    background: url(../images/companyBox.png) no-repeat top left;
-    position: absolute;
-    z-index: 5; }
-  .us #companySliderArrowleft {
-    background-position: 0 0;
-    width: 44px;
-    height: 48px; }
-  .us #companySliderArrowRight {
-    background-position: 0 -98px;
-    width: 41px;
-    height: 48px; }
-  .us #companySliderArrowRight, .us #companySliderArrowleft {
-    top: 62px;
-    opacity: 0.5;
-    cursor: pointer;
-    -webkit-transition: opacity 0.3s;
-            transition: opacity 0.3s; }
-  .us #companySliderArrowRight:hover, .us #companySliderArrowleft:hover {
-    opacity: 1; }
-  .us #companySliderArrowRight {
-    right: 0; }
-  .us #companySliderArrowleft {
-    left: 0; }
+    .us .company-logos img {
+      vertical-align: middle;
+      max-height: 60px; }
 
+/* companyBox */
 .training {
   color: #ddd;
   background: -webkit-linear-gradient(top, #154277 0%, #576e71 30%, #e1c45e 70%, #b26339 100%);
@@ -1051,21 +999,30 @@ nav.main-nav {
   .training hr {
     width: 40%;
     margin: auto;
-    margin-top: 5em; }
+    margin-top: 2em; }
   .training h2.tc {
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    color: #e1b828; }
   .training a.text-info {
     color: #fff; }
   .training .service-box {
-    text-align: center; }
+    text-align: center;
+    border-bottom: 1px solid transparent;
+    margin-bottom: 8px;
+    min-height: 260px;
+    -webkit-transition: all 0.5s;
+            transition: all 0.5s; }
+    .training .service-box i, .training .service-box h3 {
+      color: #1e1c1e;
+      -webkit-transition: all 0.5s;
+              transition: all 0.5s; }
+    .training .service-box:hover {
+      border-bottom: 1px solid #D7612B;
+      color: black; }
+      .training .service-box:hover i, .training .service-box:hover h3 {
+        color: #D7612B; }
     .training .service-box p {
       text-align: justify; }
-    .training .service-box:nth-child(1) i, .training .service-box:nth-child(1) h3 {
-      color: #d7622c; }
-    .training .service-box:nth-child(2) i, .training .service-box:nth-child(2) h3 {
-      color: #d74b59; }
-    .training .service-box:nth-child(3) i, .training .service-box:nth-child(3) h3 {
-      color: #006600; }
   @media (min-width: 785px) {
     .training .service-box {
       width: 32.20339%;
@@ -1129,19 +1086,22 @@ nav.main-nav {
           opacity: 1;
           color: #e1b828; }
     .contact .contact-us .contacts-container {
-      min-height: 50px; }
+      text-align: center; }
       @media (min-width: 785px) {
         .contact .contact-us .contacts-container {
           width: 47.36842%;
           float: left;
           margin-left: 0; } }
       .contact .contact-us .contacts-container .contact-person {
-        text-align: center;
-        float: right;
+        display: inline-block;
         margin: 5px; }
         .contact .contact-us .contacts-container .contact-person img {
-          border-radius: 30px;
-          max-height: 200px; }
+          max-height: 200px;
+          margin-bottom: 5px;
+          -webkit-transition: border-radius 1s;
+                  transition: border-radius 1s; }
+          .contact .contact-us .contacts-container .contact-person img:hover {
+            border-radius: 50%; }
         .contact .contact-us .contacts-container .contact-person h2, .contact .contact-us .contacts-container .contact-person h3, .contact .contact-us .contacts-container .contact-person h4 {
           margin: 0; }
         .contact .contact-us .contacts-container .contact-person h4 {

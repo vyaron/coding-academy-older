@@ -4,6 +4,8 @@
   background-color: #222;
   color:#ffffff;
 
+
+
   header {
     text-align: center;
     font-size: 1.5em;
@@ -54,18 +56,23 @@
 
     }
     .contacts-container {
-      min-height:50px;
-//      background: darkblue;
+      text-align: center;
       @include breakpoint($m) {
         @include span(2 of 4 last);
       }
       .contact-person {
-        text-align: center;
-        float: right;
+        display: inline-block;
+//        text-align: center;
+//        float: right;
         margin:5px;
+
         img{
-          border-radius: 30px;
           max-height: 200px;
+          margin-bottom: 5px;
+          transition: border-radius 1s;
+          &:hover {
+            border-radius: 50%;
+          }
         }
         h2,h3,h4 {margin: 0}
         h4 {color: $color2}
